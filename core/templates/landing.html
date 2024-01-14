@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/landing.css' %}">
-    <title>LANDING</title>
 </head>
 <body>
     <div class="main">
-        <button id="button"><a href="#">Get Started</a></button>
+        <button id="button"><a href="{% url 'home' %}">Get Started</a></button>
     </div>
     <script src="{% static 'js/landing.js' %}"></script>
 </body>

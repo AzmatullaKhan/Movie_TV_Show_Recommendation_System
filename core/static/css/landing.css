@@ -48,21 +48,13 @@ button{
     box-sizing: border-box;
 }
 @keyframes animation-button {
-    0%{top:-75%; width:400px}
-    100%{top:0; width:150px}
-    /* 0%{opacity: 0;}
+    /* 0%{top:-75%; width:400px}
+    100%{top:0; width:150px} */
+    0%{opacity: 0;}
     75%{opacity: 0;}
-    100%{opacity: 1;} */
+    100%{opacity: 1;}
 }
 button:hover{
     background-color: #fff;
     color: #000;
 }
-/* .click{
-    animation: animation-click 1.3s ease-in-out;
-    display: none;
-}
-@keyframes animation-click {
-    0%{top:0; display: block;}
-    100%{top:-75%; display: none;width:400px}
-} */
