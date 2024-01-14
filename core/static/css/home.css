@@ -13,5 +13,5 @@ body::-webkit-scrollbar{
     width: 100vw;
     box-sizing: border-box;
     padding:22px;
-    border:1px solid #fff;
+    /* border:1px solid #fff; */
 }
