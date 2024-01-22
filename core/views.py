@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 def landing(request):
@@ -12,4 +12,6 @@ def about(request):
 def signin(request):
     return render(request, 'registration/signin.html')
 def signup(request):
+    if request.method=='POST':
+        return redirect('signin')
     return render(request, 'registration/signup.html')

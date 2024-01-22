@@ -11,16 +11,16 @@
     <div class="main">
         <div class="nav">
             <div class="logo"><h2>Logo</h2></div>
-            <div class="search">
+            <!-- <div class="search">
                 <input type="text" class="search-bar" placeholder="Search here">
                 <img src="../static/images/search.png" alt="" class="search-image">
-            </div>
+            </div> -->
             <div class="pages">
-                <button><a href="{% url 'home' %}">Home</a></button>
-                <button><a href="{% url 'signin' %}">SignIn</a></button>
-                <button><a href="{% url 'signup' %}">SignUp</a></button>
-                <button class="active"><a href="{% url 'about' %}" class="active">About</a></button>
-                <button><a href="{% url 'contact' %}">ContactUs</a></button>
+                <button class="button"><a class="a" href="{% url 'home' %}">Home</a></button>
+                <button class="button"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
+                <button class="button" class="active"><a class="a" href="{% url 'signup' %}" class="active">SignUp</a></button>
+                <button class="button"><a class="a" href="{% url 'about' %}">About</a></button>
+                <button class="button"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>
         </div>
     </div>
