@@ -18,14 +18,14 @@
             <div class="pages">
                 <button class="button"><a class="a" href="{% url 'home' %}">Home</a></button>
                 <button class="button"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
-                <button class="button" class="active"><a class="a" href="{% url 'signup' %}" class="active">SignUp</a></button>
+                <button class="button active"><a class="a" href="{% url 'signup' %}" class="active">SignUp</a></button>
                 <button class="button"><a class="a" href="{% url 'about' %}">About</a></button>
                 <button class="button"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>
         </div>
         <div class="signup-main">
             <div class="signup-mini">
-                <form method="post">
+                <form method="post" onsubmit="return authentication()">
                     {% csrf_token %}
                     <div class="group">
                         <label for="firstname">Firstname</label>
@@ -47,10 +47,11 @@
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" required/>
                     </div>
-                    <button type="submit" class="signup-button">SignUp</button>
+                    <button type="submit" class="signup-button" id="signup-button">SignUp</button>
                </form>
             </div>
         </div>
     </div>
+    <script src="{% static 'js/signup.js' %}"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
                 <img src="../static/images/search.png" alt="" class="search-image">
             </div>
             <div class="pages">
-                <button class="button"><a class="a" href="{% url 'home' %}" class="active">Home</a></button>
+                <button class="button active"><a class="a" href="{% url 'home' %}">Home</a></button>
                 {%  if user.is_authenticated %}
                 <button class="button"><a class="a" href="{% url 'signout' %}">Logout</a></button>
                 {% else %}
