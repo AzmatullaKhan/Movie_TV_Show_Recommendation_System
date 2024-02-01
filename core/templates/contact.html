@@ -17,8 +17,12 @@
             </div> -->
             <div class="pages">
                 <button class="button"><a class="a" href="{% url 'home' %}">Home</a></button>
+                {%  if user.is_authenticated %}
+                <button class="button"><a class="a" href="{% url 'signout' %}">Logout</a></button>
+                {% else %}
                 <button class="button"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
-                <button class="button"><a class="a" href="{% url 'signup' %}" class="active">SignUp</a></button>
+                <button class="button"><a class="a" href="{% url 'signup' %}">SignUp</a></button>
+                {% endif %}
                 <button class="button"><a class="a" href="{% url 'about' %}">About</a></button>
                 <button class="button active"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>

@@ -35,14 +35,19 @@ def signup(request):
             username=request.POST['username']
             password=request.POST['password']
 
-            newUser=User.objects.create_user(username, email, password)
-            newCustomer=customer(firstname=firstname, lastname=lastname, email=email, username=username, password=password)
-            newUser.first_name=firstname
-            newUser.last_name=lastname
+            authenticationUserName=customer.objects.filter(username=username).first()
+            authenticationEmail=customer.objects.filter(email=email).first()
+            if not(authenticationEmail and authenticationUserName):
+                newUser=User.objects.create_user(username, email, password)
+                newCustomer=customer(firstname=firstname, lastname=lastname, email=email, username=username, password=password)
+                newUser.first_name=firstname
+                newUser.last_name=lastname
 
+                newUser.save()
+                newCustomer.save()
+            else:
+                return redirect('signup')
 
-            newUser.save()
-            newCustomer.save()
         except IntegrityError as e:
             return render(request, 'registration/signup.html')
         return redirect('signin')

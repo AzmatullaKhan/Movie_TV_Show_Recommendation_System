@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'Movie_TV_Show_Recommendation_System.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'pfsd_class_project',
+        'NAME':'Movie_TV_Show_Recommendation_System',
         'USER':'postgres',
         'PASSWORD':'4356'
     }
