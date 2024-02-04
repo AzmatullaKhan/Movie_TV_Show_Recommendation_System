@@ -20,6 +20,28 @@ body::-webkit-scrollbar{
     /* border:1px solid #fff; */
     overflow: hidden;
     color: #fff;
+    position: absolute;
+    top:0px;
+    left:0px;
+    animation: main-animation 0.7s ease-out;
+}
+@keyframes main-animation {
+    0%{left:2000px; height:400px; width:1300px; top:200px; opacity: 0;}
+    100%{left:0;height:900px; width:1500px; top:0; opacity: 1;}
+}
+.transistion{
+    position:absolute;
+    top:0px;
+    left:-1800px;
+    height: 900px;
+    width:1500px;
+    background-image:url('../images/transistion.png');
+    background-size: cover;
+    animation: transistion-animation 0.9s ease-out;
+}
+@keyframes transistion-animation {
+    0%{left:0; opacity: 0.6;}
+    100%{left:-1800px; opacity:0; top:200px;height:400px; width:1300px;}
 }
 .signup-main{
     height:790px;

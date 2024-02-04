@@ -56,3 +56,5 @@ def signup(request):
 def signout(request):
     logout(request)
     return redirect('home')
+def watchlist(request):
+    return render(request, 'watchlist.html')

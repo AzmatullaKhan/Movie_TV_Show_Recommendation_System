@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 </head>
 <body>
+    <div class="transistion"></div>
     <div class="main">
         <div class="nav">
             <div class="logo"><h2>Logo</h2></div>
@@ -19,6 +20,7 @@
                 <button class="button"><a class="a" href="{% url 'home' %}">Home</a></button>
                 {%  if user.is_authenticated %}
                 <button class="button"><a class="a" href="{% url 'signout' %}">Logout</a></button>
+                <button class="button"><a class="a" href="{% url 'watchlist' %}">Watchlist</a></button>
                 {% else %}
                 <button class="button"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
                 <button class="button"><a class="a" href="{% url 'signup' %}">SignUp</a></button>
@@ -27,7 +29,16 @@
                 <button class="button active"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>
         </div>
-        
+        <div class="mini-main">
+            <form action="">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="context">Context</label>
+                <input type="text" name="context" id="context">
+            </form>
+        </div>
     </div>
 </body>
 </html>

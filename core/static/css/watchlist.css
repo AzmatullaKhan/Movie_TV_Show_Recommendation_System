@@ -1,7 +1,7 @@
 body{
     margin:0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,12 +41,4 @@ body::-webkit-scrollbar{
 @keyframes transistion-animation {
     0%{left:0; opacity: 0.6;}
     100%{left:-1800px; opacity:0; top:200px;height:400px; width:1300px;}
-}
-label{
-    color:#fff
-}
-.mini-main{
-    height:720px;
-    width:100%;
-    border:1px solid #fff;
 }

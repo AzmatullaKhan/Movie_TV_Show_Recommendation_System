@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/watchlist.css' %}">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 </head>
 <body>
@@ -20,35 +20,16 @@
                 <button class="button"><a class="a" href="{% url 'home' %}">Home</a></button>
                 {%  if user.is_authenticated %}
                 <button class="button"><a class="a" href="{% url 'signout' %}">Logout</a></button>
-                <button class="button"><a class="a" href="{% url 'watchlist' %}">Watchlist</a></button>
+                <button class="button active"><a class="a" href="{% url 'watchlist' %}">Watchlist</a></button>
                 {% else %}
-                <button class="button active"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
+                <button class="button"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
                 <button class="button"><a class="a" href="{% url 'signup' %}">SignUp</a></button>
                 {% endif %}
                 <button class="button"><a class="a" href="{% url 'about' %}">About</a></button>
                 <button class="button"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>
         </div>
-        <div class="signin-main">
-            <div class="signin-mini">
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="group">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="username" required/>
-                    </div>
-                    <div class="group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" required/>
-                    </div>
-                    <div class="group-bottom">
-                        <button type="submit" class="signin-button">SignIn</button>
-                        <p>or</p>
-                        <a href="" class="signin-a">forgot password?</a>
-                    </div>
-               </form>
-            </div>
-        </div>
+        
     </div>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 </head>
 <body>
+    <div class="transistion"></div>
     <div class="main">
         <div class="nav">
             <div class="logo"><h2>Logo</h2></div>
@@ -19,6 +20,7 @@
                 <button class="button"><a class="a" href="{% url 'home' %}">Home</a></button>
                 {%  if user.is_authenticated %}
                 <button class="button"><a class="a" href="{% url 'signout' %}">Logout</a></button>
+                <button class="button"><a class="a" href="{% url 'watchlist' %}">Watchlist</a></button>
                 {% else %}
                 <button class="button"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
                 <button class="button"><a class="a" href="{% url 'signup' %}">SignUp</a></button>
@@ -40,19 +42,19 @@
                     <div class='about-pic2'></div>
                     <h1>Backend Boss</h1>
                     <h1>KL Student</h1>
-                    <a href='https://github.com/DonthineniSanthosh' class='glow'>GitHub</a>
+                    <a href='https://github.com/DonthineniSanthosh'>GitHub</a>
                 </div>
                 <div class='about-details'>
                     <div class='about-pic1'></div>
                     <h1>The Code Wizard    (LEADER)</h1>
                     <h1>KL Student</h1>
-                    <a href='https://github.com/AzmatullaKhan' class='glow'>GitHub</a>
+                    <a href='https://github.com/AzmatullaKhan'>GitHub</a>
                 </div>
                 <div class='about-details'>
                     <div class='about-pic3'></div>
                     <h1>The Visionary Architect</h1>
                     <h1>KL Student</h1>
-                    <a href='https://github.com/balajich004' class='glow'>GitHub</a>
+                    <a href='https://github.com/balajich004'>GitHub</a>
                 </div>
             </div>
             <h>THANK YOU</h>
