@@ -1,7 +1,7 @@
 body{
     margin:0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,5 +48,77 @@ label{
 .mini-main{
     height:720px;
     width:100%;
-    border:1px solid #fff;
+    display: flex;
+    box-sizing: border-box;
+    padding: 40px;
+    justify-content: center;
+}
+
+label{
+    font-size: 16px;
+    margin:12px;
+    z-index: 9;
+    position: relative;
+    text-decoration: underline;
+}
+input{
+    width:200px;
+    height:30px;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    border: 1px solid #fff;
+    margin:12px;
+    border-radius:4px;
+    text-align: center;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+}
+.context{
+    /* height: 100px;
+    max-width:800px; */
+    background-color: rgb(21, 23, 23);
+    outline: none;
+    color: #fff;
+    border: 1px solid #fff;
+    margin:12px;
+    border-radius:4px;
+    font-weight: 10;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: none;
+    border-bottom: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.contact-button{
+    font-size: 16px;
+    height:40px;
+    min-width:800px;
+    border-radius: 40px;
+    background-color: black;
+    color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 12px;
+    
+}
+.contact-button:hover{
+    background-color: #fff;
+    color:#000;
+    font-size: 17px;
+    font-weight: 100;
+}
+.image{
+    height:400px;
+    width:480px;
+    background-size: cover;
+    background-image: url('../images/contact.png');
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-radius:20px ;
+    margin-top:40px;
 }

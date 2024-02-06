@@ -30,14 +30,24 @@
             </div>
         </div>
         <div class="mini-main">
-            <form action="">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="context">Context</label>
-                <input type="text" name="context" id="context">
+            <form action="#">
+                <div style="text-align: center;margin: 40px;">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required placeholder="Username">
+                </div>
+                <div style="text-align: center;margin: 40px;">
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" required placeholder="Email [xyz@gmail.com]">
+                </div>
+                <div style="text-align: center;margin: 40px;">
+                    <label for="context">Context:</label><br>
+                    <textarea name="context" class="context" id="context" cols="86" rows="10"></textarea>
+                </div>
+                <div style="text-align: center;margin: 20px;">
+                    <button class="contact-button">Send</button>
+                </div>
             </form>
+            <div class="image"></div>
         </div>
     </div>
 </body>

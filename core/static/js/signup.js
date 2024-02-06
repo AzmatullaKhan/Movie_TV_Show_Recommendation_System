@@ -77,3 +77,9 @@ function authentication(){
 
     return ans;
 }
+
+
+// document.onkeypress = function(e){
+//     if ((e.ctrlKey || e.metaKey) && e.keyCode == 114) // Ctrl-R
+//   e.preventDefault();
+// }
