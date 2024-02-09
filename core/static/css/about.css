@@ -23,7 +23,7 @@ body::-webkit-scrollbar{
   /* border:1px solid #fff; */
   overflow: hidden;
   color: #fff;
-  position: absolute;
+  position: relative;
   top:0px;
   left:0px;
   animation: main-animation 0.7s ease-out;

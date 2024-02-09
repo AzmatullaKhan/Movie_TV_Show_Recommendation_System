@@ -18,7 +18,4 @@ body::-webkit-scrollbar{
     padding:22px;
     /* border:1px solid #fff; */
     overflow: hidden;
-    position: absolute;
-    left:0;
-    top:0;
 }
