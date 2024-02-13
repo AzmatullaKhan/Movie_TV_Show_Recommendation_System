@@ -4,13 +4,14 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
+from . import data
 
 
 # Create your views here.
 def landing(request):
     return render(request, 'landing.html')
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html', {'y': data.data})
 def contact(request):
     return render(request, 'contact.html')
 def about(request):

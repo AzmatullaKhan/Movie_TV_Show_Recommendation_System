@@ -1,3 +1,6 @@
+*{
+    color: #fff;
+}
 body{
     margin:0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -18,4 +21,94 @@ body::-webkit-scrollbar{
     padding:22px;
     /* border:1px solid #fff; */
     overflow: hidden;
+}
+.mini-main{
+    width:1400px;
+    height:100vh;
+    padding:22px;
+    box-sizing: border-box;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x:scroll;
+}
+.mini-main::-webkit-scrollbar{
+    display: none;
+}
+.main-container{
+    min-height:380px;
+    max-height: 380px;
+    min-width:160px;
+    max-width: 160px;
+    /* border:1px solid #fff; */
+    border-top-right-radius:60px;
+    border-bottom-left-radius: 60px;
+    /* filter:drop-shadow(0px 0px 0px #fff) */
+    transition: all 0.3s;
+    margin:5px;
+    transform-origin: alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.main-container:hover{
+    box-shadow: 0px 0px 40px #fff;
+    min-height:400px;
+    max-height: 400px;
+    min-width: 300px;
+    border-radius: 30px;
+}
+.animation-container{
+    height:500px;
+    width:450px;
+    border:1px solid #fff;
+    background-color: rgb(21, 23, 23);
+    border-top-right-radius: 60px;
+    border-bottom-left-radius:60px;
+    transform-origin: alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top:200px;
+    left:300px;
+    animation: animation-c 1s;
+    filter: blur(0px);
+}
+@keyframes animation-c {
+    0%{transform: rotateY(0deg);left:800px}
+    100%{transform: rotateY(360deg);left:300px}
+}
+.hidden{
+    height: 500px;
+    width:450px;
+    border:1px solid #fff;
+    display: none;
+    position: absolute;
+    left:760px; 
+    animation: hidden-animation 1.7s;
+    border-radius: 12px;
+    text-align: center;
+}
+.show{
+    height: 500px;
+    width:450px;
+    border:1px solid #fff;
+    display: block;
+    position: absolute;
+    top:197px;
+    left:755px; 
+    animation: hidden-animation 1.7s;
+    /* border-radius: 12px; */
+    /* text-align: center; */
+    border-top-right-radius: 60px;
+    border-bottom-left-radius:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes hidden-animation {
+    0%{opacity: 0;left:300px}
+    100%{opacity: 1;left:755px}   
 }

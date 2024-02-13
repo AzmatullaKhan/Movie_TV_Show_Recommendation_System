@@ -29,6 +29,13 @@
                 <button class="button"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>
         </div>
+        <div class="mini-main">
+            {% for x in y %}
+                <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}}>{{ x.genre }}</div>
+                <div class="hidden" id={{x.name}}><button  class="button" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button></div>
+            {% endfor %}
+        </div>
     </div>
+    <script src="{% static 'js/home.js' %}"></script>
 </body>
 </html>
