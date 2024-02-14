@@ -11,7 +11,7 @@ from . import data
 def landing(request):
     return render(request, 'landing.html')
 def home(request):
-    return render(request, 'home.html', {'y': data.data})
+    return render(request, 'home.html', {'first': data.data_line1})
 def contact(request):
     return render(request, 'contact.html')
 def about(request):

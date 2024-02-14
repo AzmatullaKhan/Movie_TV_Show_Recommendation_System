@@ -24,32 +24,37 @@ body::-webkit-scrollbar{
 }
 .mini-main{
     width:1400px;
-    height:100vh;
+    height:750px;
     padding:22px;
     box-sizing: border-box;
+    overflow:scroll;
+    margin-left:20px;
+}
+.movie-holder{
+    height:420px;
+    width:1358px;
     display: flex;
-    overflow-y: scroll;
-    overflow-x:scroll;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px;
 }
 .mini-main::-webkit-scrollbar{
     display: none;
 }
 .main-container{
-    min-height:380px;
-    max-height: 380px;
-    min-width:160px;
-    max-width: 160px;
-    /* border:1px solid #fff; */
-    border-top-right-radius:60px;
-    border-bottom-left-radius: 60px;
-    /* filter:drop-shadow(0px 0px 0px #fff) */
+    min-height:350px;
+    max-height: 350px;
+    min-width:250px;
+    max-width: 250px;
+    border-radius: 12px;
     transition: all 0.3s;
     margin:5px;
-    transform-origin: alternate;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: end;
     cursor: pointer;
+    box-sizing: border-box;
 }
 .main-container:hover{
     box-shadow: 0px 0px 40px #fff;
@@ -57,23 +62,20 @@ body::-webkit-scrollbar{
     max-height: 400px;
     min-width: 300px;
     border-radius: 30px;
+    padding:12px;
 }
+
 .animation-container{
-    height:500px;
+    height:600px;
     width:450px;
-    border:1px solid #fff;
     background-color: rgb(21, 23, 23);
-    border-top-right-radius: 60px;
-    border-bottom-left-radius:60px;
+    border-radius: 24px;
     transform-origin: alternate;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     position: absolute;
-    top:200px;
+    top:150px;
     left:300px;
-    animation: animation-c 1s;
+    animation: animation-c 1.5s;
     filter: blur(0px);
 }
 @keyframes animation-c {
@@ -87,28 +89,49 @@ body::-webkit-scrollbar{
     display: none;
     position: absolute;
     left:760px; 
-    animation: hidden-animation 1.7s;
+    animation: hidden-animation 1.7s; 
     border-radius: 12px;
     text-align: center;
 }
 .show{
-    height: 500px;
+    height: 600px;
     width:450px;
-    border:1px solid #fff;
-    display: block;
     position: absolute;
-    top:197px;
+    top:150px;
     left:755px; 
     animation: hidden-animation 1.7s;
-    /* border-radius: 12px; */
-    /* text-align: center; */
     border-top-right-radius: 60px;
     border-bottom-left-radius:60px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 @keyframes hidden-animation {
     0%{opacity: 0;left:300px}
     100%{opacity: 1;left:755px}   
+}
+.button-hidden{
+    font-size: 14px;
+    height:40px;
+    min-width:100px;
+    border-radius: 40px;
+    background-color: black;
+    color: #fff;
+    font-weight: 200;
+    position: relative;
+    box-sizing: border-box;
+    margin:0 12px;
+    outline: none;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin:30px;
+}
+.button-hidden:hover{
+    background-color: #fff;
+    color:#000;
+    height:50px;
+    width:110px;
+    font-size: 16px;
+    font-weight: 100;
 }

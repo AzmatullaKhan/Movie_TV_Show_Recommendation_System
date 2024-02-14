@@ -30,10 +30,14 @@
             </div>
         </div>
         <div class="mini-main">
-            {% for x in y %}
-                <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}}>{{ x.genre }}</div>
-                <div class="hidden" id={{x.name}}><button  class="button" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button></div>
-            {% endfor %}
+            <div class="movie-holder">
+                {% for x in first %}
+                    <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}} style="background-image: url('{{x.url}}'); background-size:cover; background-repeat: no-repeat;">
+                        <!-- <img src="{{x.url}}" alt="" class="image"> -->
+                    </div>
+                    <div class="hidden" id={{x.name}}><button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button></div>
+                {% endfor %}
+            </div>
         </div>
     </div>
     <script src="{% static 'js/home.js' %}"></script>
