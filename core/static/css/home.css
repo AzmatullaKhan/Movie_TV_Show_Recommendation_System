@@ -1,5 +1,6 @@
 *{
     color: #fff;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body{
     margin:0;
@@ -102,9 +103,9 @@ body::-webkit-scrollbar{
     animation: hidden-animation 1.7s;
     border-top-right-radius: 60px;
     border-bottom-left-radius:60px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    box-sizing: border-box;
+    padding:24px;
+    background-color: rgb(21, 23, 23);
 }
 @keyframes hidden-animation {
     0%{opacity: 0;left:300px}
@@ -113,25 +114,34 @@ body::-webkit-scrollbar{
 .button-hidden{
     font-size: 14px;
     height:40px;
-    min-width:100px;
+    min-width:100%;
     border-radius: 40px;
     background-color: black;
     color: #fff;
     font-weight: 200;
     position: relative;
     box-sizing: border-box;
-    margin:0 12px;
     outline: none;
     border: none;
     transition: all 0.3s;
     cursor: pointer;
-    margin:30px;
+    /* margin:15px; */
 }
 .button-hidden:hover{
     background-color: #fff;
     color:#000;
-    height:50px;
-    width:110px;
     font-size: 16px;
     font-weight: 100;
+}
+p{
+    text-align: center;
+    font-size: 17px;
+    /* margin: 10px; */
+}
+.holder{
+    width:398px;
+    text-align: center;
+}
+.headings{
+    text-decoration: underline;
 }
