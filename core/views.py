@@ -23,7 +23,7 @@ def signin(request):
         authentication=authenticate(username=username, password=password)
         if authentication is not None:
             login(request, authentication)
-            return render(request, 'home.html')
+            return redirect('home')
         else:
             return render(request, 'registration/signin.html')
     return render(request, 'registration/signin.html')
@@ -59,3 +59,5 @@ def signout(request):
     return redirect('home')
 def watchlist(request):
     return render(request, 'watchlist.html')
+def resetpassword(request):
+    return render(request, 'registration/resetpassword.html')
