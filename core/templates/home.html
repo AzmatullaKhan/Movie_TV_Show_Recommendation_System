@@ -20,7 +20,8 @@
                 <button class="button active"><a class="a" href="{% url 'home' %}">Home</a></button>
                 {%  if user.is_authenticated %}
                 <button class="button"><a class="a" href="{% url 'signout' %}">Logout</a></button>
-                <button class="button"><a class="a" href="{% url 'watchlist' %}">Watchlist</a></button>
+                <button class="button"><a class="a" href="{% url 'watchlist' %}">Watchlist<input type="text" value="{{user.username}}" name="user" style="display: none;"> </a></button>
+                    
                 {% else %}
                 <button class="button"><a class="a" href="{% url 'signin' %}">SignIn</a></button>
                 <button class="button" class="active"><a class="a" href="{% url 'signup' %}">SignUp</a></button>
@@ -49,11 +50,23 @@
                             <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
                         </div>
                         <div class="button-holder">
-                            <!-- <form method="post"> -->
+                            <form method="post">
                                 {%  if user.is_authenticated %}
                                     <button  class="button-hidden" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
+                                    <div style="display: none;">
+                                        <!-- <input type="text" value="{{x.id}}" name="data_id">
+                                        <input type="text" value="{{x.name}}" name="data_name">
+                                        <input type="text" value="{{x.genre}}" name="data_genre">
+                                        <input type="text" value="{{x.url}}" name="data_url">
+                                        <input type="text" value="{{x.desc}}" name="data_desc">
+                                        <input type="text" value="{{x.director}}" name="data_director">
+                                        <input type="text" value="{{x.writers}}" name="data_writers">
+                                        <input type="text" value="{{x.streaming}}" name="data_streaming"> -->
+                                        <input type="text" value="{{user.username}}" name="data_username">     
+                                        <input type="text" value="{{x.index}}" name="data_index">
+                                    </div>
                                 {% endif %}
-                            <!-- </form> -->
+                            </form>
                             <button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>
                         </div>
                     </div>

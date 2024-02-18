@@ -1,12 +1,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import customer
+from .models import watchList
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from . import data
 from . import watchlistdata
+import json
 
 
 # Create your views here.
@@ -14,7 +16,14 @@ def landing(request):
     return render(request, 'landing.html')
 def home(request):
     if request.method=='POST':
-        return redirect('home')
+        index=int(request.POST['data_index'])-1
+        username=request.POST['data_username']
+        d=data.data_line1
+        newWatchlist=watchList(name=d[index]['name'], movie_id=d[index]['id'], genre=d[index]['genre'], 
+                               url=d[index]['url'], desc=d[index]['desc'], director=d[index]['director'], writers=d[index]['writers'],
+                               streaming=d[index]['streaming'], username=username)
+        newWatchlist.save()
+        return render(request, 'home.html', {'first': data.data_line1})
     return render(request, 'home.html', {'first': data.data_line1})
 def contact(request):
     return render(request, 'contact.html')
@@ -26,6 +35,8 @@ def signin(request):
         password=request.POST['password']
         authentication=authenticate(username=username, password=password)
         if authentication is not None:
+            global global_user
+            global_user=username
             login(request, authentication)
             return redirect('home')
         else:
@@ -62,6 +73,34 @@ def signout(request):
     logout(request)
     return redirect('home')
 def watchlist(request):
-    return render(request, 'watchlist.html',{'first': watchlistdata.watchlist_data_line1})
+    watchlist_data=watchList.objects.filter(username=global_user)
+    # json_watchlist_data=json.loads(watchlist_data)
+    return render(request, 'watchlist.html',{'first':watchlist_data})
 def resetpassword(request):
     return render(request, 'registration/resetpassword.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # name=request.POST['data_name']
+        # id=request.POST['data_id']
+        # genre=request.POST['data_genre']
+        # url=request.POST['data_url']
+        # desc=request.POST['data_desc']
+        # director=request.POST['data_director']
+        # writers=request.POST['data_writers']
+        # platforms=request.POST['data_streaming']
+        # username=request.POST['data_username']
