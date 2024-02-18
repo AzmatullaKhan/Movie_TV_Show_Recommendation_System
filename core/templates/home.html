@@ -48,7 +48,14 @@
                         <div class="holder">
                             <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
                         </div>
-                        <button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>
+                        <div class="button-holder">
+                            <!-- <form method="post"> -->
+                                {%  if user.is_authenticated %}
+                                    <button  class="button-hidden" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
+                                {% endif %}
+                            <!-- </form> -->
+                            <button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -57,3 +64,4 @@
     <script src="{% static 'js/home.js' %}"></script>
 </body>
 </html>
+<!-- onclick="getParameter('{{x.name}}','{{x.id}}','{{x.genre}}','{{x.desc}}','{{x.writers}}','{{x.streaming}}','{{x.url}}','{{x.director}}', '{{user.username}}')" -->

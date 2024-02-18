@@ -113,8 +113,8 @@ body::-webkit-scrollbar{
 }
 .button-hidden{
     font-size: 14px;
-    height:40px;
-    min-width:100%;
+    height:45px;
+    min-width:180px;
     border-radius: 40px;
     background-color: black;
     color: #fff;
@@ -144,4 +144,12 @@ p{
 }
 .headings{
     text-decoration: underline;
+}
+.button-holder{
+    width:398px;
+    display: flex;
+    justify-content: center;
+}
+form{
+    width:180px;
 }

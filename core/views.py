@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import customer
 from django.contrib.auth.models import User
@@ -5,12 +6,15 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from . import data
+from . import watchlistdata
 
 
 # Create your views here.
 def landing(request):
     return render(request, 'landing.html')
 def home(request):
+    if request.method=='POST':
+        return redirect('home')
     return render(request, 'home.html', {'first': data.data_line1})
 def contact(request):
     return render(request, 'contact.html')
@@ -58,6 +62,6 @@ def signout(request):
     logout(request)
     return redirect('home')
 def watchlist(request):
-    return render(request, 'watchlist.html')
+    return render(request, 'watchlist.html',{'first': watchlistdata.watchlist_data_line1})
 def resetpassword(request):
     return render(request, 'registration/resetpassword.html')

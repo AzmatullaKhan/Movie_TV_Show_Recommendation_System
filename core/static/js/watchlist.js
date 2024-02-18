@@ -9,8 +9,7 @@ function Close(event, name){
     document.getElementById(name).className='hidden'
     document.getElementById(event.target.name).className='main-container'
 }
-
-function addToWatchlist(id, name){
-    document.getElementById(name).className='hidden'
-    document.getElementById(id).className='main-container'
+function remove(name, id){
+    document.getElementById(name).className='hidden';
+    document.getElementById(id).className='hidden';
 }

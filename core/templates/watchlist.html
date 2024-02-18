@@ -29,7 +29,33 @@
                 <button class="button"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>
         </div>
-        
+        <div class="mini-main">
+            <div class="movie-holder">
+                {% for x in first %}
+                    <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}} style="background-image: url('{{x.url}}'); background-size:cover; background-repeat: no-repeat;">
+                    </div>
+                    <div class="hidden" id={{x.name}}>
+                        <hr>
+                        <p style="margin-top:20px;">{{x.desc}}</p>
+                        <p style="margin-bottom: 18px;">Genre : {{x.genre}}</p>
+                        <hr>
+                        <div class="holder">
+                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p><br>
+                        </div>
+                        <div class="holder">
+                            <p class="headings">Writers:</p><p>{{x.writers}}</p><br>
+                        </div>
+                        <div class="holder">
+                            <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
+                        </div>
+                        <button  class="button-hidden" onclick="remove('{{x.name}}', '{{x.id}}')">Remove from Watchlist</button>
+                        <button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
+    <script src="{% static 'js/watchlist.js' %}"></script>
+
 </body>
 </html>
