@@ -48,8 +48,14 @@
                         <div class="holder">
                             <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
                         </div>
-                        <button  class="button-hidden" onclick="remove('{{x.name}}', '{{x.id}}')">Remove from Watchlist</button>
-                        <button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>
+                        <div class="button-holder">
+                            <form method="post">
+                                <button  class="button-hidden" type="submit">Remove from Watchlist
+                                    <input type="text" name="data_index" value="{{x.name}}" style="display: none;">
+                                </button>
+                            </form>
+                            <button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>    
+                        </div>
                     </div>
                 {% endfor %}
             </div>

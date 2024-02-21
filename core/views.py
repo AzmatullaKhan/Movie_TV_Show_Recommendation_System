@@ -73,6 +73,12 @@ def signout(request):
     logout(request)
     return redirect('home')
 def watchlist(request):
+    if request.method == 'POST':
+        index=request.POST['data_index']
+        watchlist_index=watchList.objects.filter(name=index)
+        watchlist_index.delete()
+        # return redirect('watchlist')
+        # watchList.save()
     watchlist_data=watchList.objects.filter(username=global_user)
     # json_watchlist_data=json.loads(watchlist_data)
     return render(request, 'watchlist.html',{'first':watchlist_data})
