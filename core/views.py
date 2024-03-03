@@ -7,8 +7,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from . import data
-from . import watchlistdata
-import json
+# import json
 
 
 # Create your views here.
@@ -84,29 +83,3 @@ def watchlist(request):
     return render(request, 'watchlist.html',{'first':watchlist_data})
 def resetpassword(request):
     return render(request, 'registration/resetpassword.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # name=request.POST['data_name']
-        # id=request.POST['data_id']
-        # genre=request.POST['data_genre']
-        # url=request.POST['data_url']
-        # desc=request.POST['data_desc']
-        # director=request.POST['data_director']
-        # writers=request.POST['data_writers']
-        # platforms=request.POST['data_streaming']
-        # username=request.POST['data_username']
