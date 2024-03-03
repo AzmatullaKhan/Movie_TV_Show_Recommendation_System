@@ -133,6 +133,28 @@ body::-webkit-scrollbar{
     font-size: 16px;
     font-weight: 100;
 }
+.button-visible{
+    font-size: 14px;
+    height:45px;
+    min-width:100%;
+    border-radius: 40px;
+    background-color: black;
+    color: #fff;
+    font-weight: 200;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    /* margin:15px; */
+}
+.button-visible:hover{
+    background-color: #fff;
+    color:#000;
+    font-size: 16px;
+    font-weight: 100;
+}
 p{
     text-align: center;
     font-size: 17px;
