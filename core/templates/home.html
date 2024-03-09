@@ -13,7 +13,7 @@
         <div class="nav" style="justify-content: space-between;">
             <div class="logo" id="logo"><img src="../static/images/logo.png" alt="img" class="img"></div>
             <div class="search">
-                <input type="text" class="search-bar" placeholder="Search here">
+                <input type="text" class="search-bar" placeholder="Search here" onkeyup='Search(event)'>
                 <img src="../static/images/search.png" alt="" class="search-image">
             </div>
             <div class="pages">
@@ -30,10 +30,13 @@
                 <button class="button"><a class="a" href="{% url 'contact' %}">ContactUs</a></button>
             </div>
         </div>
-        <div class="mini-main">
+        <div class="mini-main" id="mini-main">
             <div class="movie-holder">
                 {% for x in first %}
-                    <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}} style="background-image: url('{{x.url}}'); background-size:cover; background-repeat: no-repeat;">
+                    <div id="main-container">
+                        <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}} style="background-image: url('{{x.url}}'); background-size:cover; background-repeat: no-repeat;">
+                            <h2 style="display: none;">{{x.movie_name}}</h2>
+                        </div>
                     </div>
                     <div class="hidden" id={{x.name}}>
                         <hr>
