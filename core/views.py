@@ -22,8 +22,8 @@ def home(request):
                                url=d[index]['url'], desc=d[index]['desc'], director=d[index]['director'], writers=d[index]['writers'],
                                streaming=d[index]['streaming'], username=username)
         newWatchlist.save()
-        return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line1})
-    return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line1})
+        return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line2})
+    return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line2})
 def contact(request):
     return render(request, 'contact.html')
 def about(request):
