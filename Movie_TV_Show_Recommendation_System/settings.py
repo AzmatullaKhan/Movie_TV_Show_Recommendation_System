@@ -31,7 +31,7 @@ DEBUG = True
 # EMAIL_PORT=587
 # EMAIL_USE_TLS='django.core.mail.backends.smtp.EmailBackend'
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
