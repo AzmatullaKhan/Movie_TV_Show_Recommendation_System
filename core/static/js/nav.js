@@ -1,6 +1,6 @@
 let logo=document.getElementById('logo')
 logo.addEventListener('click', ()=>{
-    window.location.href='http://127.0.0.1:8888/home'
+    window.location.href='http://127.0.0.1:4545/home'
 })
 function Search(e){
     const search=e.target.value.toUpperCase();
