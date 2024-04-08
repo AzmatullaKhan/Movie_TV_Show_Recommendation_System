@@ -15,9 +15,18 @@ def landing(request):
     return render(request, 'landing.html')
 def home(request):
     if request.method=='POST':
-        index=int(request.POST['data_index'])-1
+        index=int(request.POST['data_index'])
         username=request.POST['data_username']
-        d=data.data_line1
+        if(index<=5):
+            index=index-1
+            d=data.data_line1
+        else:
+            index=(index % 5)
+            if (index==0):
+                index=4
+            else:
+                index=index-1
+            d=data.data_line2
         newWatchlist=watchList(name=d[index]['name'], movie_id=d[index]['id'], genre=d[index]['genre'], 
                                url=d[index]['url'], desc=d[index]['desc'], director=d[index]['director'], writers=d[index]['writers'],
                                streaming=d[index]['streaming'], username=username)
