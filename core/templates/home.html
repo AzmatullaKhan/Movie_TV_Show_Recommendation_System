@@ -127,6 +127,54 @@
                     </div>
                 {% endfor %}
             </div>
+            <div class="movie-holder">
+                {% for x in third %}
+                    <div id="main-container">
+                        <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}} style="background-image: url('{{x.url}}'); background-size:cover; background-repeat: no-repeat;">
+                            <h2 style="display: none;">{{x.movie_name}}</h2>
+                        </div>
+                    </div>
+                    <div class="hidden" id={{x.name}}>
+                        <hr>
+                        <p style="margin-top:20px;">{{x.desc}}</p>
+                        <p style="margin-bottom: 18px;">Genre : {{x.genre}}</p>
+                        <hr>
+                        <div class="holder">
+                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p><br>
+                        </div>
+                        <div class="holder">
+                            <p class="headings">Writers:</p><p>{{x.writers}}</p><br>
+                        </div>
+                        <div class="holder">
+                            <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
+                        </div>
+                        <div class="button-holder">
+                            <form method="post">
+                                {%  if user.is_authenticated %}
+                                    <button  class="button-hidden" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
+                                    <div style="display: none;">
+                                        <!-- <input type="text" value="{{x.id}}" name="data_id">
+                                        <input type="text" value="{{x.name}}" name="data_name">
+                                        <input type="text" value="{{x.genre}}" name="data_genre">
+                                        <input type="text" value="{{x.url}}" name="data_url">
+                                        <input type="text" value="{{x.desc}}" name="data_desc">
+                                        <input type="text" value="{{x.director}}" name="data_director">
+                                        <input type="text" value="{{x.writers}}" name="data_writers">
+                                        <input type="text" value="{{x.streaming}}" name="data_streaming"> -->
+                                        <input type="text" value="{{user.username}}" name="data_username">     
+                                        <input type="text" value="{{x.index}}" name="data_index">
+                                    </div>
+                                {% endif %}
+                            </form>
+                            {%  if user.is_authenticated %}
+                                <button  class="button-hidden" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>
+                            {% elif not user.is_authenticated %}
+                                <button  class="button-visible" onclick="Close(event, '{{x.name}}')" name={{x.id}}>Close</button>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
     <script src="{% static 'js/home.js' %}"></script>

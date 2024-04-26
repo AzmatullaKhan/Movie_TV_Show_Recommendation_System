@@ -20,19 +20,26 @@ def home(request):
         if(index<=5):
             index=index-1
             d=data.data_line1
-        else:
+        elif(index>5 and index<=10):
             index=(index % 5)
             if (index==0):
                 index=4
             else:
                 index=index-1
             d=data.data_line2
+        else:
+            index=(index % 5)
+            if (index==0):
+                index=10
+            else:
+                index=index-1
+            d=data.data_line3
         newWatchlist=watchList(name=d[index]['name'], movie_id=d[index]['id'], genre=d[index]['genre'], 
                                url=d[index]['url'], desc=d[index]['desc'], director=d[index]['director'], writers=d[index]['writers'],
                                streaming=d[index]['streaming'], username=username)
         newWatchlist.save()
-        return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line2})
-    return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line2})
+        return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line2, 'third':data.data_line3})
+    return render(request, 'home.html', {'first': data.data_line1, 'second':data.data_line2, 'third':data.data_line3})
 def contact(request):
     return render(request, 'contact.html')
 def about(request):
