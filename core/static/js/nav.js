@@ -7,6 +7,10 @@ function Search(e){
     const items=document.getElementById('mini-main')
     const product=document.querySelectorAll(".main-container")
     const pname=items.getElementsByTagName("h2");
+    if(search.length>0)
+        document.getElementById('gallery_id').style.display="none"
+    else
+        document.getElementById('gallery_id').style.display=""
     for(var i=0;i<pname.length;i++){
         let match=pname[i];
         if(match){
@@ -24,4 +28,5 @@ function Search(e){
             }
         }
     }
+
 }

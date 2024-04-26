@@ -37,7 +37,7 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    padding: 12px;
+    padding-top: 12px;
 }
 .mini-main::-webkit-scrollbar{
     display: none;
@@ -174,4 +174,37 @@ p{
 }
 form{
     width:180px;
+}
+.d-block{
+    max-height: 600px;
+    max-width: 500px;
+    background-color: black;
+    border-radius: 30px;
+}
+.carousel{
+    background-color: inherit;
+    position: relative;
+    top:30px;
+}
+.carousel-inner{
+    background-color: inherit;
+}
+.carousel-item{
+    background-color:black;
+    border-radius: 30px;
+}
+.active{
+    background-attachment: inherit;
+}
+.slide{
+    background-color: inherit;
+}
+.head-recommend{
+    font-size: 22px;
+    margin-top:30px;
+    font-weight:lighter;
+}
+h{
+    font-weight: 100;
+    font-size: 22px;
 }
