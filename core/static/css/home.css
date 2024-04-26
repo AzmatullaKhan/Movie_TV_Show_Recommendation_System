@@ -125,7 +125,11 @@ body::-webkit-scrollbar{
     border: none;
     transition: all 0.3s;
     cursor: pointer;
+    top:50px
     /* margin:15px; */
+}
+.extra{
+    top:10px;
 }
 .button-hidden:hover{
     background-color: #fff;
@@ -207,4 +211,15 @@ form{
 h{
     font-weight: 100;
     font-size: 22px;
+}
+.input-rating{
+    margin:0px 30px;
+    height:25px;
+    width:150px;
+    color: #fff;
+    border: #fff;
+    outline: none;
+    text-align: center;
+    border: 12px;
+    background-color: transparent;
 }

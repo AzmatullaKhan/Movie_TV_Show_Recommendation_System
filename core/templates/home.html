@@ -104,27 +104,28 @@
                         <p style="margin-bottom: 18px;">Genre : {{x.genre}}</p>
                         <hr>
                         <div class="holder">
-                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p><br>
+                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p>
                         </div>
                         <div class="holder">
-                            <p class="headings">Writers:</p><p>{{x.writers}}</p><br>
+                            <p class="headings">Writers:</p><p>{{x.writers}}</p>
                         </div>
                         <div class="holder">
                             <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
                         </div>
+                        <div class="holder">
+                            <p class="headings">Rating ⭐:</p>
+                            <p style="font-weight: bold;">{{x.rating}}</p>
+                        </div>
                         <div class="button-holder">
                             <form method="post">
                                 {%  if user.is_authenticated %}
-                                    <button  class="button-hidden" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
+                                    <div style="width: 450px; display: flex;">
+                                        <p class="headings">Give Rating ⭐:<input type="number" class="input-rating" placeholder="Max->5" max="5" min="0"/></p>
+                                    </div>
+                                {% endif %}
+                                {%  if user.is_authenticated %}
+                                    <button  class="button-hidden extra" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
                                     <div style="display: none;">
-                                        <!-- <input type="text" value="{{x.id}}" name="data_id">
-                                        <input type="text" value="{{x.name}}" name="data_name">
-                                        <input type="text" value="{{x.genre}}" name="data_genre">
-                                        <input type="text" value="{{x.url}}" name="data_url">
-                                        <input type="text" value="{{x.desc}}" name="data_desc">
-                                        <input type="text" value="{{x.director}}" name="data_director">
-                                        <input type="text" value="{{x.writers}}" name="data_writers">
-                                        <input type="text" value="{{x.streaming}}" name="data_streaming"> -->
                                         <input type="text" value="{{user.username}}" name="data_username">     
                                         <input type="text" value="{{x.index}}" name="data_index">
                                     </div>
@@ -152,27 +153,28 @@
                         <p style="margin-bottom: 18px;">Genre : {{x.genre}}</p>
                         <hr>
                         <div class="holder">
-                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p><br>
+                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p>
                         </div>
                         <div class="holder">
-                            <p class="headings">Writers:</p><p>{{x.writers}}</p><br>
+                            <p class="headings">Writers:</p><p>{{x.writers}}</p>
                         </div>
                         <div class="holder">
                             <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
                         </div>
+                        <div class="holder">
+                            <p class="headings">Rating ⭐:</p>
+                            <p style="font-weight: bold;">{{x.rating}}</p>
+                        </div>
                         <div class="button-holder">
                             <form method="post">
                                 {%  if user.is_authenticated %}
-                                    <button  class="button-hidden" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
+                                    <div style="width: 450px; display: flex;">
+                                        <p class="headings">Give Rating ⭐:<input type="number" class="input-rating" placeholder="Max->5" max="5" min="0"/></p>
+                                    </div>
+                                {% endif %}
+                                {%  if user.is_authenticated %}
+                                    <button  class="button-hidden extra" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
                                     <div style="display: none;">
-                                        <!-- <input type="text" value="{{x.id}}" name="data_id">
-                                        <input type="text" value="{{x.name}}" name="data_name">
-                                        <input type="text" value="{{x.genre}}" name="data_genre">
-                                        <input type="text" value="{{x.url}}" name="data_url">
-                                        <input type="text" value="{{x.desc}}" name="data_desc">
-                                        <input type="text" value="{{x.director}}" name="data_director">
-                                        <input type="text" value="{{x.writers}}" name="data_writers">
-                                        <input type="text" value="{{x.streaming}}" name="data_streaming"> -->
                                         <input type="text" value="{{user.username}}" name="data_username">     
                                         <input type="text" value="{{x.index}}" name="data_index">
                                     </div>
@@ -200,27 +202,28 @@
                         <p style="margin-bottom: 18px;">Genre : {{x.genre}}</p>
                         <hr>
                         <div class="holder">
-                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p><br>
+                            <p class="headings">Director:</p><p style="align-self: flex-start;">{{x.director}}</p>
                         </div>
                         <div class="holder">
-                            <p class="headings">Writers:</p><p>{{x.writers}}</p><br>
+                            <p class="headings">Writers:</p><p>{{x.writers}}</p>
                         </div>
                         <div class="holder">
                             <p class="headings">Streaming-on:</p><p>{{x.streaming}}</p>
                         </div>
+                        <div class="holder">
+                            <p class="headings">Rating ⭐:</p>
+                            <p style="font-weight: bold;">{{x.rating}}</p>
+                        </div>
                         <div class="button-holder">
                             <form method="post">
                                 {%  if user.is_authenticated %}
-                                    <button  class="button-hidden" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
+                                    <div style="width: 450px; display: flex;">
+                                        <p class="headings">Give Rating ⭐:<input type="number" class="input-rating" placeholder="Max->5" max="5" min="0"/></p>
+                                    </div>
+                                {% endif %}
+                                {%  if user.is_authenticated %}
+                                    <button  class="button-hidden extra" name="home" onclick="addToWatchlist('{{x.id}}', '{{x.name}}')">Add to Watchlist</button>
                                     <div style="display: none;">
-                                        <!-- <input type="text" value="{{x.id}}" name="data_id">
-                                        <input type="text" value="{{x.name}}" name="data_name">
-                                        <input type="text" value="{{x.genre}}" name="data_genre">
-                                        <input type="text" value="{{x.url}}" name="data_url">
-                                        <input type="text" value="{{x.desc}}" name="data_desc">
-                                        <input type="text" value="{{x.director}}" name="data_director">
-                                        <input type="text" value="{{x.writers}}" name="data_writers">
-                                        <input type="text" value="{{x.streaming}}" name="data_streaming"> -->
                                         <input type="text" value="{{user.username}}" name="data_username">     
                                         <input type="text" value="{{x.index}}" name="data_index">
                                     </div>
