@@ -30,6 +30,13 @@
             </div>
         </div>
         <div class="mini-main">
+            <hr>
+            <center>
+                <div class="user-profile">
+                    <h2>Logged in as <span style="text-decoration: underline; color:cyan">{{name}}</span></h2>
+                </div>
+            </center>
+            <hr>
             <div class="movie-holder">
                 {% for x in first %}
                     <div class="main-container" onclick='Click(event, "{{x.name}}")' id={{x.id}} style="background-image: url('{{x.url}}'); background-size:cover; background-repeat: no-repeat;">

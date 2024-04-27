@@ -172,3 +172,21 @@ p{
 form{
     width:180px;
 }
+.user-profile{
+    width:1200px;
+    height:100px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid #fff; */
+}
+.usermain-profile{
+    width:600px;
+    height:160px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}

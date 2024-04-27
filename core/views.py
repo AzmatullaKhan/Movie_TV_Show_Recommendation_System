@@ -96,6 +96,6 @@ def watchlist(request):
         # watchList.save()
     watchlist_data=watchList.objects.filter(username=global_user)
     # json_watchlist_data=json.loads(watchlist_data)
-    return render(request, 'watchlist.html',{'first':watchlist_data})
+    return render(request, 'watchlist.html',{'first':watchlist_data, 'name':global_user})
 def resetpassword(request):
     return render(request, 'registration/resetpassword.html')
