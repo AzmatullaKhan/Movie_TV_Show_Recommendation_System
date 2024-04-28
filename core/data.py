@@ -46,8 +46,8 @@ data_line1=[
         'director':'S.S. Rajamouli',
         'streaming':'Netflix, Diney+ Hotstar & Sony Liv',
         'writers':'RajamouliC.H & Vijay Kumar',
+        'index':5,
         'rating':"for 1.2k reviews 4.7/5",
-
     },
 ]
 data_line2=[ 

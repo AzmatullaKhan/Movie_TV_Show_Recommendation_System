@@ -30,7 +30,7 @@ def home(request):
         else:
             index=(index % 5)
             if (index==0):
-                index=10
+                index=4
             else:
                 index=index-1
             d=data.data_line3
